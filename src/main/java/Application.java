@@ -13,17 +13,26 @@ import java.util.List;
 
 public class Application extends JFrame implements  ActionListener{
     private static JFrame frame;
+    private static JButton bExit;
     public Application (){
         frame = new JFrame("Application");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        bExit = new JButton();
+        bExit.setText("Exit");
+        bExit.addActionListener(this);
+        frame.add(bExit);
+
+        frame.pack();
     }
     public static void main (String[] args){
         Application app = new Application();
-        frame.setSize(800,400);
+        //frame.setSize(800,400);
         frame.setVisible(true);
     }
 
-    public void actionPerformed(ActionEvent e) {
-        //
+    public void actionPerformed(ActionEvent actionEvent) {
+         if (actionEvent.getSource()== bExit){
+             System.exit(0);
+         }
     }
 }
