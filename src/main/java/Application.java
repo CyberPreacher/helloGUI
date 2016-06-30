@@ -1,5 +1,5 @@
 /**
- * Created by phujcn on 30/06/2016.
+ * Created by phujcn on 30/06/2016 example file.
  */
 
 import javax.swing.*;
